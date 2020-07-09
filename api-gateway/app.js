@@ -1,3 +1,12 @@
+/*============================================
+; Title: Assignment 1.4
+; Author: Peter Itskovich
+; Date: 8 July 2020
+; Modified By: Darius Dinkins
+; Description: API Setup
+===========================================
+*/
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -10,7 +19,7 @@ mongoose.Promise = require("bluebird");
 
 /* Database connection */
 
-mongoose.connect('mongodb://admin:admin@ds121588.mlab.com:21588/mean-library', 
+mongoose.connect('mongodb+srv://admin:admin@cluster0.vupgp.mongodb.net/api-gateway?authSource=admin&replicaSet=atlas-4j8iwd-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true', 
   {
   promiseLibrary: require('bluebird')
   }).then ( () => console.log('connection successful'))
