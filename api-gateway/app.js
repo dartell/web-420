@@ -20,7 +20,7 @@ var indexRouter = require('./routes/index');
 var app = express();
 
 //database connection
-mongoose.connect('mongodb+srv://admin:admin@cluster0.vupgp.mongodb.net/api-gateway?authSource=admin&replicaSet=atlas-4j8iwd-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true', {
+mongoose.connect('mongodb+srv://admin:admin@cluster0.vupgp.mongodb.net/api-gateway?retryWrites=true&w=majority', {
   promiseLibrary: require('bluebird')
   }).then(()=>console.log('connection successful'))
   .catch((err)=>console.error(err));
